@@ -7,6 +7,7 @@
   <title>Kazuko Koshiyama</title>
   <link href="https://fonts.googleapis.com/earlyaccess/sawarabimincho.css" rel="stylesheet" />
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
 </head>
 
@@ -20,7 +21,7 @@
 
 		</div>
 		<div class="nav-right">
-			<span class="menu-toggle">MENU</span>
+			<i class="fa fa-bars fa-2x menu-toggle" aria-hidden="true"></i>
 			<ul id='menu'>
 				<li><a href="index.html">Home</a></li>
 				<li><a href="about.html">About</a></li>
@@ -33,18 +34,46 @@
 <main>
 	<div class="container clearfix">
 		<div class="left-contents">
-			<h1>Contact</h1>
-			<p>メッセージフォーム</p>
-			<h3>message me</h3>
-			<br>
-			<form action="genckazuko@gmail.com" method="post">
-				<p>メールアドレス（必須）</p>
-				<input type="text" name="">
-				<p>メッセージはこちらへ</p>
-				<textarea></textarea>
-				<br>
-				<input class="contact-submit" type="submit" name="">
-			</form>
+			<div id="wrap">
+				<h1>Contact</h1>
+				<p class="text-center">メッセージフォーム</p>
+				<h3>message me</h3>
+				<form action="">
+					<dl>
+						<dt>お名前<span class="required-item">必須</span></dt>
+						<dd><input type="text" name="name" required></dd>
+						<dt>Eメール<span class="required-item">必須</span></dt>
+						<dd><input type="email" name="email" required></dd>
+						<dt>電話番号</dt>
+						<dd><input type="tel" name="tel"></dd>
+						<dt>お問い合わせの種類</dt>
+						<dd>
+							<select name="category">
+								<option value="">選んでください</option>
+								<option value="サービスへのご質問等">サービスへのご質問等</option>
+								<option value="取材のお申し込み">取材のお申し込み</option>
+								<option value="その他">その他</option>
+							</select>
+						</dd>
+						<dt>ご希望のご連絡方法</dt>
+						<dd>
+							<input type="radio" name="contact" value="Eメール" id="contact1" checked><label for="contact1">Eメール</label>
+							<input type="radio" name="contact" value="電話" id="contact2"><label for="contact2">電話</label>
+						</dd>
+						<dt>連絡可能な時間帯</dt>
+						<dd>
+							<input type="checkbox" name="time" value="午前" id="time1"><label for="time1">午前</label>
+							<input type="checkbox" name="time" value="午後" id="time2"><label for="time2">午後</label>
+							<input type="checkbox" name="time" value="夜間" id="time3"><label for="time3">夜間</label>
+						</dd>
+						<dt>お問い合わせ内容<span class="required-item">必須</span></dt>
+						<dd><textarea name="message" placeholder="お問い合わせ内容を300文字以内で入力してください。" required></textarea></dd>
+					</dl>
+					<div id="submit-area">
+						<input type="submit" value="送信する">
+					</div>
+				</form>
+			</div>
 
 
 		</div>
